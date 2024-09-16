@@ -351,7 +351,7 @@ def cred_schedule(
                 uuid=assessment_reservation_uuid,
             )
             if response and "assessment_reservation" not in response:
-                error = response["error"]
+                error = response["message"]
                 return flask.render_template(
                     "/credentials/schedule.html",
                     error=error,
